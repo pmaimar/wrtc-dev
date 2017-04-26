@@ -2,7 +2,7 @@
   "socketURL": "/",
   "socketMessageEvent": "RTCMultiConnection-Message",
   "socketCustomEvent": "RTCMultiConnection-Custom-Message",
-  "port": "443",
+  "port": "3000",
   "enableLogs": "true",
   "autoRebootServerOnFailure": "true"
 }

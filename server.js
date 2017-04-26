@@ -13,8 +13,7 @@ function resolveURL(url) {
 // Please use HTTPs on non-localhost domains.
 var isUseHTTPs = true;
 
-//var port = 443;
-var port = process.env.PORT || 443;
+var port = process.env.PORT || 3000;
 
 var fs = require('fs');
 var path = require('path');
@@ -34,7 +33,7 @@ var autoRebootServerOnFailure = false;
 try {
     var config = require(resolveURL('./config.json'));
 
-    if ((config.port || '').toString() !== '443') {
+    if ((config.port || '').toString() !== '3000') {
         port = parseInt(config.port);
     }
 
@@ -224,7 +223,7 @@ function runServer() {
             console.log('\x1b[31m%s\x1b[0m ', socketURL + ' is already in use. Please kill below processes using "kill PID".');
             console.log('------------------------------');
 
-            foo = new cmd_exec('lsof', ['-n', '-i4TCP:443'],
+            foo = new cmd_exec('lsof', ['-n', '-i4TCP:3000'],
                 function(me, data) {
                     me.stdout += data.toString();
                 },
