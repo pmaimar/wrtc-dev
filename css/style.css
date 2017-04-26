@@ -1,0 +1,21 @@
+video {
+    object-fit: fill;
+    width: 75%;
+}
+select {
+    font-weight: normal;
+    padding: 2px 4px;
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: none;
+    font-size: 12px;
+    outline: none;
+}
+#streamControl {
+    display: none;
+    position: absolute;
+    margin: 15px;
+}
+#recordControl,#recording {
+    display: none;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Video Broadcasting RTCMultiConnection</title>
+
+    <meta name="description" content="One-to-Many Video Broadcasting using RTCMultiConnection" />
+    <meta name="keywords" content="WebRTC,RTCMultiConnection,Demos,Experiments,Samples,Examples" />
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+
+<body class="blue-grey darken-2">
+    <article>
+        <header class="col s12" style="text-align: center;">
+            <h4 class="grey-text text-lighten-4">Video Broadcasting WRTC</h3>
+        </header>
+        <div class="container">
+            <section class="experiment">
+                <div class="row">
+                    <div>
+                        <div class="input-field col s12 m6">
+                            <input type="text" id="room-id" name="room-id" value="abcdef">
+                            <label for="room-id">Identificador de sala</label>
+                            <ul>
+                                <li>
+                                    <button id="open-room" class="btn blue lighten-1">Abrir sala</button>
+                                </li>
+                                <br>
+                                <li>
+                                    <button id="join-room" class="btn indigo lighten-1">Unirse a sala</button>
+                                </li>
+                                <br>
+                                <li>
+                                    <button id="open-or-join-room" class="btn">auto</button>
+                                </li>
+                            </ul>
+                            <div id="videos-container" class="videos-container">
+
+                                <div id="streamControl">
+                                    <button id="toggle-mic" class="btn-floating"><i class="material-icons">mic</i></button>
+                                    <button id="toggle-video" class="btn-floating"><i class="material-icons">videocam</i></button>   
+                                    <i id="recording" class="material-icons">fiber_manual_record</i>
+                                </div>
+                            </div>
+                        </div> 
+                        
+                        <div id="room-urls" class="col s12 m6"></div>
+                        <div id="recordControl" class="col s12 m6">
+                            <button id="record" class="btn">Grabar</button>
+                            <br><br>
+                            <button id="stop" class="btn">Detener</button>
+                        <h5></h5>
+                        </div>
+                           
+                    </div>
+                </div>
+                
+            </section>
+            <div class="box" id="box1">Drag and throw me</div>
+            <div class="box" id="box2" style="left:392px; background-color:red;">Drag and throw me too</div>
+        </div>
+        <div class="controls">
+                <ul>
+                    <li class="controlsTitle">Options</li>
+                    <li>
+                        <label><input type="checkbox" name="snap" id="snap" value="1" /> Snap end position to grid</label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="liveSnap" id="liveSnap" value="1" /> Live snap</label>
+                    </li>
+                </ul>
+            </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p class="center-align">
+                WebRTC develop - Pablo Matias Aimar - ©
+                <a href="https://idaltech.com" target="_blank"> IDalTech</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="/dist/RecordRTC.js"></script>
+    <script src="/dist/RTCMultiConnection.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/dist/getScreenId.js"></script>
+    <script src="/dist/screen-sharing.js"></script>
+    <script src="/dist/drag.js"></script>
+</html>
